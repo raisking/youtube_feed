@@ -28,7 +28,7 @@
         function getVids(pid) {
             $.get(URL, {
                     part: 'snippet',
-                    maxResults: 5,
+                    maxResults: 20,
                     playlistId: pid,
                     key: key
                 },
