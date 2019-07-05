@@ -9,7 +9,8 @@
 
         $.get(channels, {
                 part: 'contentDetails',
-                id: ' UCbhulgq6wxHjQleHl60CWng',
+                id: ' UC4_qBUkZQBfYsJ7eNYqXaBg',
+                
                 key: key
             },
             function (data) {
