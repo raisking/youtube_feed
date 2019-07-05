@@ -10,7 +10,6 @@
         $.get(channels, {
                 part: 'contentDetails',
                 id: ' UC4_qBUkZQBfYsJ7eNYqXaBg',
-                
                 key: key
             },
             function (data) {
@@ -22,9 +21,6 @@
                 })
             }
         )
-
-
-        // Get videos
         function getVids(pid) {
             $.get(URL, {
                     part: 'snippet',
@@ -33,48 +29,16 @@
                     key: key
                 },
                 function (data) {
-                  var output;
-                  $.each(data.items, function(i, item){
-                      console.log(item);
-                      videTitle = item.snippet.title;
-                      videoId = item.snippet.resourceId.videoId;
-                      output = '<li><iframe width="400" height="260"src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
-                    
-                      $('#results').append(output);
-                  })
+                    var output;
+                    $.each(data.items, function (i, item) {
+                        console.log(item);
+                        videTitle = item.snippet.title;
+                        videoId = item.snippet.resourceId.videoId;
+                        output = `<li><iframe width="400" height="260"src=\"//www.youtube.com/embed/${videoId}\"></iframe></li>`;
+
+                        $('#results').append(output);
+                    })
                 }
             )
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // var options = {
-        //     part: 'snippet',
-        //     key: key,
-        //     maxResults: 5,
-        //     playlistId: playlistId
-        // }
-
-        // loadVids();
-        //       function loadVids() {
-        //     $.getJSON(URL, options, function (data) {
-        //         // console.log(data.items);
-        //         $.each(data,function(i, index){
-        //             console.log(i, index)
-        //         })
-        //     });
-        // }
-
-
     });
