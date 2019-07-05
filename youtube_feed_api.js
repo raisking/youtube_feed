@@ -38,7 +38,7 @@
                       console.log(item);
                       videTitle = item.snippet.title;
                       videoId = item.snippet.resourceId.videoId;
-                      output = '<li><iframe src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
+                      output = '<li><iframe width="400" height="260"src=\"//www.youtube.com/embed/'+videoId+'\"></iframe></li>';
                     
                       $('#results').append(output);
                   })
