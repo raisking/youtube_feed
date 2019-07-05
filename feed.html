@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Facebook Feed API</title>
+    <!-- You can use open graph tags to customize link previews.
+    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+    <meta property="og:url" content="https://www.facebook.com/raipaisal" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Your Website Title" />
+    <meta property="og:description" content="Your description" />
+    <meta
+      property="og:image"
+      content="https://www.your-domain.com/path/image.jpg"
+    />
+    <!-- Latest compiled and minified CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <style>
+      body {
+        background-color: none;
+      }
+      .container {
+        display: flex;
+        padding: 20px;
+        margin-top: 20px;
+        overflow: hidden;
+        background-color: #fff;
+        overflow-wrap: break-word;
+      }
+      .wrapper {
+        width: 60%;
+      }
+      ul li img {
+        max-width: 100%;
+        height: auto;
+      }
+      li {
+        list-style: none;
+        padding: 5px;
+      }
+      img,
+      iframe {
+        width: 450px;
+        height: 300px;
+      }
+      a:hover {
+        color: red;
+      }
+      hr {
+        border-top: 1px solid black;
+      }
+      .fb-page {
+        border: none;
+      }
+      #ul-fbfeed {
+        width: 450px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="fb-like"
+      data-href="https://www.facebook.com/raipaisal"
+      data-layout="standard"
+      data-action="like"
+      data-show-faces="true"
+    ></div>
+    <div id="lifestream">
+      &nbsp;
+      <div class="feed"></div>
+      <div id = "container">
+        <ul id="result"></ul>
+      </div>
+      <div class="container">
+        <div class="wrapper">
+            <script
+              async
+              defer
+              crossorigin="anonymous"
+              src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3&appId=451419755655046&autoLogAppEvents=1"
+            ></script>
+            <div id="fb-root">
+              <div
+                class="fb-page"
+                data-href="https://www.facebook.com/ups"
+                data-tabs="timeline,events"
+                data-width="450"
+                data-height="700"
+                data-hide-cta="true"
+                data-small-header="true"
+                data-adapt-container-width="true"
+                data-hide-cover="true"
+                data-show-facepile="false"
+              >
+                <blockquote
+                  cite="https://www.facebook.com/facebook"
+                  class="fb-xfbml-parse-ignore"
+                >
+                  <a href="https://www.facebook.com/facebook">Facebook</a>
+                </blockquote>
+              </div>
+              <hr />
+            </div>
+          </div>
+          <div class="fb_feed_wrapper">
+            <ul id="ul-fbfeed"></ul>
+          </div>
+          
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <!-- <script src="youtube_feed_api.js"></script> -->
+  </body>
+</html>
