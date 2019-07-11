@@ -14,10 +14,10 @@
             },
             function (data) {
                 $.each(data.items, function (i, item) {
-                    console.log(item)
+                    // console.log(item)
                     pid = item.contentDetails.relatedPlaylists.uploads;
                     getVids(pid);
-
+                    // console.log(pid)
                 })
             }
         )
@@ -36,13 +36,12 @@
                         videTitle = item.snippet.title;
                         videoId = item.snippet.resourceId.videoId;
                         output = `  <li>
-                                        <iframe 
-                                            width="400" 
-                                            height="260"
-                                            src=\"//www.youtube.com/embed/${videoId}\">
+                                        <iframe width="400" height="260"src=\"//www.youtube.com/embed/${videoId}\">
                                         </iframe>
-                                    </li>`;
-
+                                    </li>
+                                    <li class="title">${item.snippet.channelTitle}</li>
+                                    <li class="description">${item.snippet.description}</li>
+                                    `;
                         $('#results').append(output);
                     })
                 }
